@@ -1,1 +1,56 @@
-ああ
+.main
+  .main__header
+    .main__header__left
+      %h2.main__header__left__group
+        チームブルゾン
+      %h3.main__header__left__member
+        Member : 田中角栄
+    
+    = link_to "#", class: "main__header__editbtn" do
+      Edit
+  
+  .main__posted
+    .main__posted__user
+      %p.main__posted__user__name
+        杉田 玄白
+      %p.main__posted__user__date
+        1771/02/13(Wed) 06:35:02
+    %p.main__posted__content
+      オランダきててワロタ
+
+    .main__posted__user
+      %p.main__posted__user__name
+        趙 雲
+      %p.main__posted__user__date
+        227/01/21(Sun) 17:50:59
+    %p.main__posted__content
+      刘禅真是愚蠢。
+
+    .main__posted__user
+      %p.main__posted__user__name
+        Standartenführer Hans Landa
+      %p.main__posted__user__date
+        1931/04/06(Mon) 11:20:11
+    %p.main__posted__content
+      Wenn der Schuh passt, müssen Sie ihn tragen.
+
+    .main__posted__user
+      %p.main__posted__user__name
+        沢尻 エトピリカ 隆盛
+      %p.main__posted__user__date
+        2019/11/16(Sat) 08:00:00
+    %p.main__posted__content
+      私のものに間違いないぜよ。
+
+  .main__form
+    .main__form__index
+      %p.main__form__index__message 
+        type a message   
+      
+        %label{class: "main__form__index--image", for: "content-images"}
+          = icon('fas', 'image')
+        %input{type: "file", id: "content-images"}
+
+    %p.main__form__send
+      send 
+    
