@@ -5,20 +5,16 @@
         = current_user.name
       %ul.side__header__box__images
         %li.side__header__box__images__new
-          = link_to do
+          = link_to new_group_path do
             = icon('fas', 'edit', class: 'icon')
         %li.side__header__box__images__new 
           = link_to edit_user_path(current_user) do
             = icon('fas', 'cog', class: 'icon')
   .side__group   
-    %p.side__group__name
-      チームブルゾン
-    %p.side__group__message
-      聖域なきhoge
-
-    %p.side__group__name
-      チームぬらりひょん
-    %p.side__group__message
-      桜を見るhoge
- 
-      
+    - current_user.groups.each do |group|
+      .side__group__list
+        = link_to '#' do
+          .side__group__list__name
+            = group.name
+          .side__group__list__message
+            メッセージはまだありません。
