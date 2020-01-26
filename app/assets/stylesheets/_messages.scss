@@ -29,13 +29,13 @@ $gray_color: #999999;
           font-size: 16px;
         }
         &__images {
-          text-decoration: none;
+          display: flex;
           &__new {
-            margin-right: 5px;
-            color:$white_color;
-          }
-          &__account {
-            color:$white_color;
+            .icon {
+              text-decoration: none;
+              margin-right: 5px;
+              color:$white_color;
+            }
           }
         }
       }

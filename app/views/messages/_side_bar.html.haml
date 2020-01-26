@@ -2,14 +2,14 @@
   .side__header
     .side__header__box
       %p.side__header__box__username
-        hogehogeman
+        = current_user.name
       %ul.side__header__box__images
-        
-        = link_to "#", class: "side__header__box__images__new" do
-          = icon('fas', 'edit', class: "side__header__box__images__new__btn--icon")
-        
-        = link_to "#", class: "side__header__box__images__account" do
-          = icon('fas', 'cog', class: "side__header__box__images__account__btn--icon")
+        %li.side__header__box__images__new
+          = link_to do
+            = icon('fas', 'edit', class: 'icon')
+        %li.side__header__box__images__new 
+          = link_to edit_user_path(current_user) do
+            = icon('fas', 'cog', class: 'icon')
   .side__group   
     %p.side__group__name
       チームブルゾン
