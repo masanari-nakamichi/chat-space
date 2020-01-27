@@ -43,14 +43,11 @@
       私のものに間違いないぜよ。
 
   .main__form
-    .main__form__index
-      %p.main__form__index__message 
-        type a message   
-      
-        %label{class: "main__form__index--image", for: "content-images"}
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'main__form__index', placeholder: 'type a message'
+      .main__form__index__message 
+        = f.label :image, class: 'main__form__index--image' do
           = icon('fas', 'image')
-        %input{type: "file", id: "content-images"}
-
-    %p.main__form__send
-      send 
+          = f.file_field :image, class: 'content-images'
+      = f.submit 'Send', class: 'form__submit'
     
