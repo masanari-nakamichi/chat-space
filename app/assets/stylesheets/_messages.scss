@@ -48,16 +48,20 @@ $gray_color: #999999;
           font-size: 15px;
           margin: 0px 20px;
           padding-top: 20px;
+          text-decoration: none;
+          color:$white_color;
         }
         &__message {
           font-size: 11px;
           margin: 5px 20px 40px 20px;
+          text-decoration: none;
+          color:$white_color;
         }
       }
     }
   }
   .main {
-    width: calc(100% - 300px);
+    width: calc(100vw - 300px);
     &__header {
       height: 100px;
       background-color: $white_color;
@@ -77,15 +81,15 @@ $gray_color: #999999;
           color: $gray_color;
         }
       }
-        &__editbtn {
-          width: 72px;
-          font-size: 16px;
-          color: $skyblue_color;
-          border: 1px solid $skyblue_color;
-          padding: 10px 20px;
-          margin: 28px 0px;
-          text-decoration: none;
-      }
+      &__editbtn {
+        text-decoration: none;
+        width: 72px;
+        font-size: 16px;
+        color: $skyblue_color;
+        border: 1px solid $skyblue_color;
+        padding: 10px 20px;
+        margin: 28px 0px;
+        }
     }
     &__posted {
       height: calc(100vh - 190px);
@@ -114,39 +118,45 @@ $gray_color: #999999;
       height: 90px;
       background-color: #d2d2d2;
       display: flex;
+      position: relative;
       &__index {
         display: flex;
         background-color: white;
         height: 50px;
-        width: calc(100vw - 200px);
-        padding: 10px;
+        width: calc(100vw - 500px);
         margin: 20px 0px 20px 40px;
         position: relative;
         &__message { 
-          width: 100%;
           color: $gray_color;
+          width: 88%;
+          height: 100%;
+          border-style: none;
+          position: absolute;
         }
         &--image {
+          width: 20px;
           position: absolute;
-          top: 10px;
+          top: 15px;
           right: 10px;
-          cursor: pointer;
-          color: $black_color;
-        }  
-        input {
-          display: none;
+          &--icon {
+            cursor: pointer;
+            color: $black_color;
+          } 
+          &--file {
+            visibility: hidden;
+          }
         }
       }
-      &__send {
+      &__submit {
         width: 100px;
         height: 50px;
         padding: 10px 30px;
-        margin: 20px 40px 20px 0px;
+        top: 20px;
+        right: 40px;
         background-color: $skyblue_color;
         color: white;
-        margin-left: 15px;
+        position: absolute;
         cursor: pointer;
-        display: inline-block;
       }
     }
   }
