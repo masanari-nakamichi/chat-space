@@ -10,6 +10,7 @@ $gray_color: #999999;
 .wrapper {
   display: flex;
   height: 100vh;
+  overflow: hidden; 
   .side {
     width: 300px;
     background-color: #253141;
@@ -95,6 +96,7 @@ $gray_color: #999999;
       height: calc(100vh - 190px);
       background-color: #fafafa;
       padding: 35px 40px 0px 40px;
+      overflow: scroll;
       &__user {
         &__name {
           font-size: 16px;
