@@ -1,5 +1,14 @@
 class UsersController < ApplicationController
 
+  def index
+    @users = User.search(params[:keyword], current_user.id)
+      # 検索条件に関してはuser.rbに記述する。
+    respond_to do |format|
+      format.html
+      format.json
+    end
+  end
+
   def edit
   end
 
