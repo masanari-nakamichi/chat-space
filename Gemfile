@@ -77,8 +77,7 @@ gem 'fog-aws'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.5'
 
+
 group :production do
   gem 'unicorn', '5.4.1'
 end
-
-
