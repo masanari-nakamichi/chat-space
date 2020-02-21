@@ -1,6 +1,7 @@
 #サーバ上でのアプリケーションコードが設置されているディレクトリを変数に入れておく
 app_path = File.expand_path('../../../', __FILE__)
 
+
 #アプリケーションサーバの性能を決定する
 worker_processes 1
 
@@ -24,6 +25,10 @@ stdout_path "#{app_path}/shared/log/unicorn.stdout.log"
 timeout 60
 
 #以下は応用的な設定なので説明は割愛
+
+before_exec do |server|
+  ENV['BUNDLE_GEMFILE'] = @app_path + "/current/Gemfile"
+end
 
 preload_app true
 GC.respond_to?(:copy_on_write_friendly=) && GC.copy_on_write_friendly = true
