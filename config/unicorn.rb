@@ -26,6 +26,14 @@ timeout 60
 
 #以下は応用的な設定なので説明は割愛
 
+set :default_env, {
+  rbenv_root: "/home/user/.rbenv",
+  path: "/home/user/.rbenv/bin:$PATH",
+  aws_access_key_id: ENV["AWS_ACCESS_KEY_ID"] 
+  aws_secret_access_key: ENV["AWS_SECRET_ACCESS_KEY"] 
+}
+
+
 before_exec do |server|
   ENV['BUNDLE_GEMFILE'] = "#{app_path}/current/Gemfile"
 end
