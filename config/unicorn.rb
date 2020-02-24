@@ -27,7 +27,7 @@ timeout 60
 #以下は応用的な設定なので説明は割愛
 
 before_exec do |server|
-  ENV['BUNDLE_GEMFILE'] = @app_path + "/current/Gemfile"
+  ENV['BUNDLE_GEMFILE'] = "#{app_path}/current/Gemfile"
 end
 
 preload_app true
