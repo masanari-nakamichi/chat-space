@@ -1,4 +1,3 @@
-require 'capistrano/console'
 require "capistrano/setup"
 require "capistrano/deploy"
 require "capistrano/scm/git"
