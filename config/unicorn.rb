@@ -29,7 +29,7 @@ timeout 60
 set :default_env, {
   rbenv_root: "/home/user/.rbenv",
   path: "/home/user/.rbenv/bin:$PATH",
-  aws_access_key_id: ENV["AWS_ACCESS_KEY_ID"] 
+  aws_access_key_id: ENV["AWS_ACCESS_KEY_ID"], 
   aws_secret_access_key: ENV["AWS_SECRET_ACCESS_KEY"] 
 }
 
