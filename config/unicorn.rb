@@ -3,7 +3,7 @@ app_path = File.expand_path('../../../', __FILE__)
 
 
 #アプリケーションサーバの性能を決定する
-worker_processes 1
+worker_processes 3
 
 #アプリケーションの設置されているディレクトリを指定
 working_directory "#{app_path}/current"
@@ -25,8 +25,6 @@ stdout_path "#{app_path}/shared/log/unicorn.stdout.log"
 timeout 60
 
 #以下は応用的な設定なので説明は割愛
-
-
 
 
 
