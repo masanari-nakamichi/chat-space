@@ -9,7 +9,7 @@ worker_processes 1
 working_directory "#{app_path}/current"
 
 #ポート番号を指定
-listen "/var/run/unicorn.sock"
+listen 3000
 
 #Unicornの起動に必要なファイルの設置場所を指定
 pid "/var/run/unicorn.pid"
@@ -28,9 +28,7 @@ timeout 60
 
 
 
-before_exec do |server|
-  ENV['BUNDLE_GEMFILE'] = "#{app_path}/current/Gemfile"
-end
+
 
 preload_app true
 GC.respond_to?(:copy_on_write_friendly=) && GC.copy_on_write_friendly = true
