@@ -1,18 +1,18 @@
 #サーバ上でのアプリケーションコードが設置されているディレクトリを変数に入れておく
-app_path = File.expand_path('../../../', __FILE__)
+app_path = File.expand_path('/var/www/chat-space/', __FILE__)
 
 
 #アプリケーションサーバの性能を決定する
-worker_processes 3
+worker_processes 1
 
 #アプリケーションの設置されているディレクトリを指定
-working_directory "#{app_path}/current"
+working_directory app_path
 
 #ポート番号を指定
-listen "/var/run/unicorn.sock"
+listen 3000
 
 #Unicornの起動に必要なファイルの設置場所を指定
-pid "/var/run/unicorn.pid"
+pid "#{app_path}/tmp/pids/unicorn.pid"
 
 
 #エラーのログを記録するファイルを指定
