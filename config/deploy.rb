@@ -15,7 +15,7 @@ set :ssh_options, auth_methods: ['publickey'],
                   keys: ['~/.ssh/ChatS.pem']
 
 # プロセス番号を記載したファイルの場所
-set :unicorn_pid, -> { "/var/run/chat-space/shared/tmp/pids/unicorn.pid" }
+set :unicorn_pid, -> { "/var/www/chat-space/shared/tmp/pids/unicorn.pid" }
 
 # Unicornの設定ファイルの場所
 set :unicorn_config_path, -> { "/var/www/chat-space/current/config/unicorn.rb" }
