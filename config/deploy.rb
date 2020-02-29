@@ -1,4 +1,4 @@
--# config valid for current version and patch releases of Capistrano
+# config valid for current version and patch releases of Capistrano
 lock '3.12.0'
 
 set :application, 'chat-space'
@@ -27,3 +27,4 @@ namespace :deploy do
   task :restart do
     invoke 'unicorn:restart'
   end
+end
