@@ -121,49 +121,51 @@ $gray_color: #999999;
       background-color: #d2d2d2;
       display: flex;
       position: relative;
-      &__index {
-        display: flex;
-        background-color: white;
-        height: 50px;
-        width: calc(100vw - 500px);
-        margin: 20px 0px 20px 40px;
-        position: relative;
-        &__message { 
+        &__index {
+          height: 50px;
+          width: calc(100vw - 500px);
+          margin: 20px 0px 20px 40px;
+          border: none;
+          position: absolute;
           color: $gray_color;
-          width: 88%;
-          height: 100%;
+          display: inline-block;
+        }
+        &__frame {
+          margin-left: calc(100vw - 470px);
+          margin-top: 23px;
           border-style: none;
           position: absolute;
+          display: inline-block;
+          &--image {
+            width: 20px;
+            position: absolute;
+            top: 15px;
+            right: 10px;
+            display: block;
+            &--icon {
+              cursor: pointer;
+              color: $black_color;
+              display: block;
+            } 
+            &--file {
+              visibility: hidden;
+            }
+          }     
         }
-        &--image {
-          width: 20px;
-          position: absolute;
-          top: 15px;
-          right: 10px;
-          &--icon {
+        &__btn {
+            width: 100px;
+            height: 50px;
+            padding: 10px 30px;
+            top: 20px;
+            right: 40px;
+            background-color: $skyblue_color;
+            color: white;
+            position: absolute;
             cursor: pointer;
-            color: $black_color;
-          } 
-          &--file {
-            visibility: hidden;
-          }
         }
-      }
-      &__submit {
-        width: 100px;
-        height: 50px;
-        padding: 10px 30px;
-        top: 20px;
-        right: 40px;
-        background-color: $skyblue_color;
-        color: white;
-        position: absolute;
-        cursor: pointer;
-      }
     }
   }
 }
-
 
 
 

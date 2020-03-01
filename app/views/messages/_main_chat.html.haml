@@ -17,10 +17,10 @@
 
   .main__form
     = form_for [@group, @message] do |f|
-      .main__form__index 
-        = f.text_field :content, class: 'main__form__index__message', placeholder: 'type a message'
-        = f.label :image, class: 'main__form__index--image' do
-          = icon('fas', 'image', class: 'main__form__index--image--icon')
-          = f.file_field :image, class: 'main__form__index--image--file'
-      = f.submit 'Send', class: 'main__form__submit'
+      = f.text_field :content, class: 'main__form__index', placeholder: 'type a message'
+      .main__form__frame
+        = f.label :image, class: 'main__form__frame--image' do
+          = icon('fas', 'image', class: 'main__form__frame--image--icon')
+          = f.file_field :image, class: 'main__form__frame--image--file'     
+      = f.submit 'Send', class: 'main__form__btn'
     
