@@ -82,8 +82,8 @@ $(function() {
         $.each(messages, function(i, message) {
           insertHTML += buildHTML(message)
         });
-        $('.messages').append(insertHTML);
-        $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
+        $('.main__posted').append(insertHTML);
+        $('.main__posted').animate({ scrollTop: $('.main__posted')[0].scrollHeight});
       }
     })
     .fail(function() {
