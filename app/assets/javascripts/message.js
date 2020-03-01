@@ -1,6 +1,6 @@
-$(function(){
+$(function() {
   
-  function buildHTML(message){
+  var buildHTML = function buildHTML(message) {
     if ( message.image ) {
       var html =
        `<div class="message" data-message-id=${message.id}>
@@ -42,10 +42,10 @@ $(function(){
   }
 
 
-  $('#new_message').on('submit', function(e){
+  $('#new_message').on('submit', function(e) {
     e.preventDefault();
     var formData = new FormData(this);
-    var url = $(this).attr('action')
+    var url = $(this).attr('action');
     $.ajax({
       url: url,
       type: "POST",
@@ -54,12 +54,12 @@ $(function(){
       processData: false,
       contentType: false
     })
-    .done(function(data){
-      var html = buildHTML(data);
-      $('.main__posted').append(html);    
-      $('.main__form__index__message').val('');
+    .done(function(formData) {
+      var html = buildHTML(formData);
+      $('.main__posted').append(html);
+      $('.main__form__index').val('');
       $('.main__posted').animate({ scrollTop: $('.main__posted')[0].scrollHeight});
-      $('.main__form__submit').prop("disabled", false);
+      $('.main__form__btn').prop("disabled", false);
     })
     .fail(function() {
       alert("メッセージ送信に失敗しました");
@@ -90,7 +90,7 @@ $(function(){
       alert('自動更新に失敗しました');
     })
   }
-  if (window.location.href.match(/\/groups\/\d+\/messages/)){
+  if (document.location.href.match(/\/groups\/\d+\/messages/)) {
     setInterval(reloadMessages, 7000);
   }
 });
