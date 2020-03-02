@@ -12,9 +12,8 @@
             = icon('fas', 'cog', class: 'icon')
   .side__group   
     - current_user.groups.each do |group|
-      .side__group__list
-        = link_to group_messages_path(group) do
-          .side__group__list__name
-            = group.name
-          .side__group__list__message
-            = group.show_last_message
+      = link_to group_messages_path(group),class:"side__group__list" do
+        .side__group__list__name
+          = group.name
+        .side__group__list__message
+          = group.show_last_message

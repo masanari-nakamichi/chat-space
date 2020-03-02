@@ -45,19 +45,19 @@ $gray_color: #999999;
       background-color: #2f3e51;
       height: calc(100vh - 100px);
       &__list {
-        &__name {
-          font-size: 15px;
-          margin: 0px 20px;
-          padding-top: 20px;
-          text-decoration: none;
-          color:$white_color;
-        }
-        &__message {
-          font-size: 11px;
-          margin: 5px 20px 40px 20px;
-          text-decoration: none;
-          color:$white_color;
-        }
+        text-decoration: none;
+        color:$white_color;
+          &__name {
+            font-size: 15px;
+            margin: 0px 20px;
+            padding-top: 20px;
+            color:$white_color;
+          }
+          &__message {
+            font-size: 11px;
+            margin: 5px 20px 40px 20px;
+            color:$white_color;
+          }
       }
     }
   }
